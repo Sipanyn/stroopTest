@@ -1,0 +1,9 @@
+{
+  "choices": [
+    { "id": "yellow", "name": "زرد" },
+    { "id": "purple", "name": "بنفش" },
+    { "id": "green", "name": "سبز" },
+    { "id": "white", "name": "سفید" },
+    { "id": "red", "name": "قرمز" },
+    { "id": "blue", "name": "آبی" }
+  ]}
