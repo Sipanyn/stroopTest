@@ -10,6 +10,8 @@ const initialState={
     correct:0,
     wrong:0,
     finish:false,
+    isLaoding:true,
+    iconPath:"./svg/spinner.svg"
 };
 const QuestionSlice=createSlice({
     name:"question",
@@ -42,8 +44,12 @@ const QuestionSlice=createSlice({
     },
     extraReducers:(builder)=>{
         builder.addCase(fetchQuestion.fulfilled,(state,action)=>{
+            state.isLaoding=false
              state.mainQuestion=action.payload[Math.floor(Math.random() * 5)]   // {name , id}
              state.color=action.payload[Math.floor(Math.random() * 5)].id
+        })
+        .addCase(fetchQuestion.pending,(state,action)=>{
+            state.isLaoding=true
         })
     }
 })
