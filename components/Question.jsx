@@ -9,7 +9,7 @@ function Question() {
     {isLaoding ? (
       <div style={{width:"60px",height:"60px"}}><Spinner/></div>
     ) : (
-      <p style={{ color, fontWeight: "bold", fontSize: "22px",width:"60px",height:"60px" }}>
+      <p style={{textAlign:"center", color, fontWeight: "bold", fontSize: "22px",width:"60px",height:"60px" }}>
         {mainQuestion.name}
       </p>
     )}
